@@ -3,9 +3,17 @@
 ## <span id="Introduction">Introduction</span>
 &emsp;&emsp;
 
+## <span id="Dependencies">Dependencies</span>
+Software:
+- [python >=3.7](https://www.python.org/)
+- [pigz](http://zlib.net/pigz/)
+- [minimap2](https://github.com/lh3/minimap2)
+- [3d-dna](https://github.com/aidenlab/3d-dna)
+- [parallel](https://www.gnu.org/software/parallel)
+
 ## <span id="Installation">Installation</span>
 
-&emsp;&emsp;HAST has been tested and validated on servers running Linux.
+HAST has been tested and validated on servers running Linux.
 ```bash
 # (1) Download HAST from GitHub
 $ git clone https://github.com/zskey-zn/HAST.git
@@ -24,7 +32,7 @@ $ chmod +x  *.sh */*
 ## <span id="quick_start">Quick start</span>
 
 ```bash
-usage_example: HiFi-C_pipeline.sh -r PATH/contig.fa -i PATH/HiFi-C.fq.gz -p '-x map-hifi' -t 30 -c 10000 -e GATC -d PATH/3d-dna -o species
+usage_example: HiFi-C_pipeline.sh -r PATH/contig.fa -i PATH/HiFi-C.fq.gz -p '-x map-hifi' -t 30 -c 10000 -e GATC -d PATH/3d-dna -o your_species
 
 options:
   -h, --help           show this help message and exit
@@ -32,7 +40,7 @@ options:
   -i, --fq_in          <fastq file>  HiFi-C/Pore-C data
   -p, --map_params     <minimap2 align parameter> (if your data is Pore-C,set `-x map-ont` )
   -t, --threads        number of threads
-  -c, --chunk_size     Number of records per processing chunk
+  -c, --chunk_size     Number of records per processing chunk, If the dataset is large, you can increase the `chunk_size` parameter.
   -e, --enzyme_site    Enzyme recognition site `GATC` (MboI/DpnII), `AAGCTT` (HindIII)
   -d, --_3ddna_path    3ddna software path
   -o, --output_prefix  output prefix
