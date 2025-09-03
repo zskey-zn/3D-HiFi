@@ -1,6 +1,9 @@
 ## HAST : HiFi-C Accelerated Scaffolding Tool
 
-## <span id="installation">Installation</span>
+## <span id="Introduction">Introduction</span>
+&emsp;&emsp;
+
+## <span id="Installation">Installation</span>
 
 &emsp;&emsp;HAST has been tested and validated on servers running Linux.
 ```bash
@@ -17,3 +20,5 @@ $ git clone https://github.com/aidenlab/3d-dna.git
 $ cd 3d-dna
 $ chmod +x  *.sh */*
 ```
+
+## <span id="quick_start">Quick start</span>
