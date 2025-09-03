@@ -22,3 +22,18 @@ $ chmod +x  *.sh */*
 ```
 
 ## <span id="quick_start">Quick start</span>
+
+```bash
+usage_example: HiFi-C_pipeline.sh -r PATH/contig.fa -i PATH/HiFi-C.fq.gz -p '-x map-hifi' -t 30 -c 10000 -e GATC -d PATH/3d-dna -o species
+
+options:
+  -h, --help           show this help message and exit
+  -r, --ref            contig genome
+  -i, --fq_in          <fastq file>  HiFi-C/Pore-C data
+  -p, --map_params     <minimap2 align parameter> (if your data is Pore-C,set `-x map-ont` )
+  -t, --threads        number of threads
+  -c, --chunk_size     Number of records per processing chunk
+  -e, --enzyme_site    Enzyme recognition site `GATC` (MboI/DpnII), `AAGCTT` (HindIII)
+  -d, --_3ddna_path    3ddna software path
+  -o, --output_prefix  output prefix
+```
