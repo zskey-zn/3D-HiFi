@@ -41,7 +41,7 @@ options:
   -p, --map_params     <minimap2 align parameter> (if your data is Pore-C,set "-x map-ont" )
   -t, --threads        number of threads
   -c, --chunk_size     Number of records per processing chunk, If the dataset is large, you can increase the `chunk_size` parameter.
-  -e, --enzyme_site    Enzyme recognition site: GATC (MboI/DpnII), AAGCTT (HindIII)
+  -e, --enzyme_site    Enzyme recognition site: GATC (MboI/DpnII), AAGCTT (HindIII), CATG(NlaIII)
   -d, --_3ddna_path    3ddna software path
   -o, --output_prefix  output prefix
 ```
