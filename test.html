@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NextDenovo Parameter Reference &mdash; nextdenovo  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Utilities" href="UTILITY.html" />
+    <link rel="prev" title="Assemble the genome of HG002_NA24385_son using NextDenovo" href="TEST1.html" /> 
+
+<!-- RTD Extra Head -->
+
+
+
+<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": false, "api_host": "https://readthedocs.org", "builder": "sphinx", "canonical_url": null, "docroot": "/doc/", "features": {"docsearch_disabled": false}, "global_analytics_code": "UA-17997319-1", "language": "en", "page": "OPTION", "programming_language": "words", "project": "nextdenovo", "proxied_api_host": "/_", "source_suffix": ".rst", "subprojects": {}, "theme": "sphinx_rtd_theme", "user_analytics_code": "", "version": "latest"}</script>
+
+<!--
+Using this variable directly instead of using `JSON.parse` is deprecated.
+The READTHEDOCS_DATA global variable will be removed in the future.
+-->
+<script type="text/javascript">
+READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerHTML);
+</script>
+
+
+
+<!-- end RTD <extrahead> -->
+<script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="nextdenovo" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/OPTION.html" /><meta name="readthedocs-http-status" content="200" /></head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> nextdenovo
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="QSTART.html">Usuage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TEST1.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Parameter Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#input">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#output">Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options">Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#global-options">Global options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#correction-options">Correction options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#assembly-options">Assembly options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="UTILITY.html">Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">FAQ</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Benchmark</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="TEST2.html">CHM13hTERT human cell line with 120x Oxford Nanopore data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TEST3.html">Arabidopsis thaliana with 192X PacBio CLR data (~1% heterozygosity)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TEST4.html">Drosophila melanogaster with 69X Oxford Nanopore data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TEST5.html">More data</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">nextdenovo</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">NextDenovo Parameter Reference</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Nextomics/NextDenovo/blob/master/doc/OPTION.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nextdenovo-parameter-reference">
+<span id="parameterreference"></span><h1>NextDenovo Parameter Reference<a class="headerlink" href="#nextdenovo-parameter-reference" title="Permalink to this heading"></a></h1>
+<p>NextDenovo requires at least one read file (option: <code class="docutils literal notranslate"><span class="pre">input_fofn</span></code>) as input, it works with gzip’d FASTA and FASTQ formats and uses a <code class="docutils literal notranslate"><span class="pre">config</span> <span class="pre">file</span></code> to pass options.</p>
+<section id="input">
+<h2>Input<a class="headerlink" href="#input" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">input_fofn</span></code> (one file one line)</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>reads1.fasta<span class="w"> </span>reads2.fastq<span class="w"> </span>reads3.fasta.gz<span class="w"> </span>reads4.fastq.gz<span class="w"> </span>...<span class="w"> </span>&gt;<span class="w"> </span>input.fofn
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">config</span> <span class="pre">file</span></code></p>
+<p>A config file is a text file that contains a set of parameters (key=value pairs) to set runtime parameters for NextDenovo. The following is a typical config file, which is also located in <code class="docutils literal notranslate"><span class="pre">doc/run.cfg</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>General<span class="o">]</span>
+<span class="nv">job_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">local</span>
+<span class="nv">job_prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>nextDenovo
+<span class="nv">task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>all
+<span class="nv">rewrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>yes
+<span class="nv">deltmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>yes
+<span class="nv">parallel_jobs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span>
+<span class="nv">input_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>raw
+<span class="nv">read_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>clr<span class="w"> </span><span class="c1"># clr, ont, hifi</span>
+<span class="nv">input_fofn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>input.fofn
+<span class="nv">workdir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>01_rundir
+
+<span class="o">[</span>correct_option<span class="o">]</span>
+<span class="nv">read_cutoff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>1k
+<span class="nv">genome_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>1g<span class="w"> </span><span class="c1"># estimated genome size</span>
+<span class="nv">sort_options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-m<span class="w"> </span>20g<span class="w"> </span>-t<span class="w"> </span><span class="m">15</span>
+<span class="nv">minimap2_options_raw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-t<span class="w"> </span><span class="m">8</span>
+<span class="nv">pa_correction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span>
+<span class="nv">correction_options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-p<span class="w"> </span><span class="m">15</span>
+
+<span class="o">[</span>assemble_option<span class="o">]</span>
+<span class="nv">minimap2_options_cns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-t<span class="w"> </span><span class="m">8</span>
+<span class="nv">nextgraph_options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-a<span class="w"> </span><span class="m">1</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this heading"></a></h2>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">workdir/03.ctg_graph/nd.asm.fasta</span></code></p>
+<p>Contigs with fasta format, the fasta header includes ID, type, length, node count, a consecutive lowercase region in the sequence implies a weak connection, and a low quality base is marked with a single lowercase base.</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workdir/03.ctg_graph/nd.asm.fasta.stat</span></code></p>
+<p>Some basic statistical information (N10-N90, Total size et al.).</p>
+</li>
+</ul>
+</section>
+<section id="options">
+<span id="id1"></span><h2>Options<a class="headerlink" href="#options" title="Permalink to this heading"></a></h2>
+<section id="global-options">
+<h3>Global options<a class="headerlink" href="#global-options" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-job_type">
+<span id="cmdoption-arg-job-type"></span><span class="sig-name descname"><span class="pre">job_type</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">sge</span></span><a class="headerlink" href="#cmdoption-arg-job_type" title="Permalink to this definition"></a></dt>
+<dd><p>local, sge, pbs, lsf, slurm… (default: sge)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-job_prefix">
+<span id="cmdoption-arg-job-prefix"></span><span class="sig-name descname"><span class="pre">job_prefix</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">nextDenovo</span></span><a class="headerlink" href="#cmdoption-arg-job_prefix" title="Permalink to this definition"></a></dt>
+<dd><p>prefix tag for jobs. (default: nextDenovo)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-task">
+<span id="cmdoption-arg-correct"></span><span id="cmdoption-arg-assemble"></span><span class="sig-name descname"><span class="pre">task</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">&lt;all</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">correct</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">assemble&gt;</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-arg-task" title="Permalink to this definition"></a></dt>
+<dd><p>task need to run, correct = only do the correction step, assemble = only do the assembly step (only work if <code class="docutils literal notranslate"><span class="pre">input_type</span></code> = corrected or <code class="docutils literal notranslate"><span class="pre">read_type</span></code> = hifi), all = correct + assemble. (default: all)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-rewrite">
+<span class="sig-name descname"><span class="pre">rewrite</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">no</span></span><a class="headerlink" href="#cmdoption-arg-rewrite" title="Permalink to this definition"></a></dt>
+<dd><p>overwrite existed directory [yes, no]. (default: no)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-deltmp">
+<span class="sig-name descname"><span class="pre">deltmp</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">yes</span></span><a class="headerlink" href="#cmdoption-arg-deltmp" title="Permalink to this definition"></a></dt>
+<dd><p>delete intermediate results. (default: yes)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-rerun">
+<span class="sig-name descname"><span class="pre">rerun</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">3</span></span><a class="headerlink" href="#cmdoption-arg-rerun" title="Permalink to this definition"></a></dt>
+<dd><p>re-run unfinished jobs untill finished or reached <code class="docutils literal notranslate"><span class="pre">rerun</span></code> loops, 0=no. (default: 3)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-parallel_jobs">
+<span id="cmdoption-arg-parallel-jobs"></span><span class="sig-name descname"><span class="pre">parallel_jobs</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">10</span></span><a class="headerlink" href="#cmdoption-arg-parallel_jobs" title="Permalink to this definition"></a></dt>
+<dd><p>number of tasks used to run in parallel. (default: 10)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-input_type">
+<span id="cmdoption-arg-input-type"></span><span class="sig-name descname"><span class="pre">input_type</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">raw</span></span><a class="headerlink" href="#cmdoption-arg-input_type" title="Permalink to this definition"></a></dt>
+<dd><p>input reads type [raw, corrected]. (default: raw)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-input_fofn">
+<span id="cmdoption-arg-input-fofn"></span><span class="sig-name descname"><span class="pre">input_fofn</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">input.fofn</span></span><a class="headerlink" href="#cmdoption-arg-input_fofn" title="Permalink to this definition"></a></dt>
+<dd><p>input file, one line one file. (<strong>required</strong>)</p>
+</dd></dl>
+
+</div></blockquote>
+<blockquote id="read-type">
+<div><dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-read_type">
+<span id="cmdoption-arg-read-type"></span><span id="cmdoption-arg-hifi"></span><span id="cmdoption-arg-ont"></span><span class="sig-name descname"><span class="pre">read_type</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">{clr</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">hifi</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">ont}</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-arg-read_type" title="Permalink to this definition"></a></dt>
+<dd><p>reads type, clr=PacBio continuous long read, hifi=PacBio highly accurate long reads, ont=NanoPore 1D reads. (<strong>required</strong>)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-workdir">
+<span class="sig-name descname"><span class="pre">workdir</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">01.workdir</span></span><a class="headerlink" href="#cmdoption-arg-workdir" title="Permalink to this definition"></a></dt>
+<dd><p>work directory. (default: ./)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-usetempdir">
+<span class="sig-name descname"><span class="pre">usetempdir</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">/tmp/test</span></span><a class="headerlink" href="#cmdoption-arg-usetempdir" title="Permalink to this definition"></a></dt>
+<dd><p>temporary directory in compute nodes to avoid high IO wait. (default: None)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-nodelist">
+<span class="sig-name descname"><span class="pre">nodelist</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">avanode.list.fofn</span></span><a class="headerlink" href="#cmdoption-arg-nodelist" title="Permalink to this definition"></a></dt>
+<dd><p>a list of hostnames of available nodes, one node one line, used with usetempdir for non-sge job_type.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-submit">
+<span class="sig-name descname"><span class="pre">submit</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">auto</span></span><a class="headerlink" href="#cmdoption-arg-submit" title="Permalink to this definition"></a></dt>
+<dd><p>command to submit a job, auto = automatically set by <a class="reference external" href="https://github.com/moold/ParallelTask">Paralleltask</a>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-kill">
+<span class="sig-name descname"><span class="pre">kill</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">auto</span></span><a class="headerlink" href="#cmdoption-arg-kill" title="Permalink to this definition"></a></dt>
+<dd><p>command to kill a job, auto = automatically set by <a class="reference external" href="https://github.com/moold/ParallelTask">Paralleltask</a>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-check_alive">
+<span id="cmdoption-arg-check-alive"></span><span class="sig-name descname"><span class="pre">check_alive</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">auto</span></span><a class="headerlink" href="#cmdoption-arg-check_alive" title="Permalink to this definition"></a></dt>
+<dd><p>command to check a job status, auto = automatically set by <a class="reference external" href="https://github.com/moold/ParallelTask">Paralleltask</a>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-job_id_regex">
+<span id="cmdoption-arg-job-id-regex"></span><span class="sig-name descname"><span class="pre">job_id_regex</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">auto</span></span><a class="headerlink" href="#cmdoption-arg-job_id_regex" title="Permalink to this definition"></a></dt>
+<dd><p>the job-id-regex to parse the job id from the out of <code class="docutils literal notranslate"><span class="pre">submit</span></code>, auto = automatically set by <a class="reference external" href="https://github.com/moold/ParallelTask">Paralleltask</a>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-use_drmaa">
+<span id="cmdoption-arg-use-drmaa"></span><span class="sig-name descname"><span class="pre">use_drmaa</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">no</span></span><a class="headerlink" href="#cmdoption-arg-use_drmaa" title="Permalink to this definition"></a></dt>
+<dd><p>use drmaa to submit and control jobs.</p>
+</dd></dl>
+
+</div></blockquote>
+</section>
+<section id="correction-options">
+<h3>Correction options<a class="headerlink" href="#correction-options" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-read_cutoff">
+<span id="cmdoption-arg-read-cutoff"></span><span class="sig-name descname"><span class="pre">read_cutoff</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">1k</span></span><a class="headerlink" href="#cmdoption-arg-read_cutoff" title="Permalink to this definition"></a></dt>
+<dd><p>filter reads with length &lt; <code class="docutils literal notranslate"><span class="pre">read_cutoff</span></code>. (default: 1k)</p>
+</dd></dl>
+
+</div></blockquote>
+<blockquote id="genome-size">
+<div><dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-genome_size">
+<span id="cmdoption-arg-genome-size"></span><span class="sig-name descname"><span class="pre">genome_size</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">1g</span></span><a class="headerlink" href="#cmdoption-arg-genome_size" title="Permalink to this definition"></a></dt>
+<dd><p>estimated genome size, suffix K/M/G recognized, used to calculate <code class="docutils literal notranslate"><span class="pre">seed_cutoff</span></code>/<code class="docutils literal notranslate"><span class="pre">seed_cutfiles</span></code>/<code class="docutils literal notranslate"><span class="pre">blocksize</span></code> and average depth, it can be omitted when manually setting <code class="docutils literal notranslate"><span class="pre">seed_cutoff</span></code>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-seed_depth">
+<span id="cmdoption-arg-seed-depth"></span><span class="sig-name descname"><span class="pre">seed_depth</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">45</span></span><a class="headerlink" href="#cmdoption-arg-seed_depth" title="Permalink to this definition"></a></dt>
+<dd><p>expected seed depth, used to calculate <code class="docutils literal notranslate"><span class="pre">seed_cutoff</span></code>, co-use with <code class="docutils literal notranslate"><span class="pre">genome_size</span></code>, you can try to set it 30-45 to get a better assembly result. (default: 45)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-seed_cutoff">
+<span id="cmdoption-arg-seed-cutoff"></span><span class="sig-name descname"><span class="pre">seed_cutoff</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">0</span></span><a class="headerlink" href="#cmdoption-arg-seed_cutoff" title="Permalink to this definition"></a></dt>
+<dd><p>minimum seed length, &lt;=0 means calculate it automatically using <a class="reference internal" href="UTILITY.html#seq-stat"><span class="std std-ref">bin/seq_stat</span></a>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-seed_cutfiles">
+<span id="cmdoption-arg-seed-cutfiles"></span><span class="sig-name descname"><span class="pre">seed_cutfiles</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">5</span></span><a class="headerlink" href="#cmdoption-arg-seed_cutfiles" title="Permalink to this definition"></a></dt>
+<dd><p>split seed reads into <code class="docutils literal notranslate"><span class="pre">seed_cutfiles</span></code> subfiles. (default: <code class="docutils literal notranslate"><span class="pre">pa_correction</span></code>)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-blocksize">
+<span class="sig-name descname"><span class="pre">blocksize</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">10g</span></span><a class="headerlink" href="#cmdoption-arg-blocksize" title="Permalink to this definition"></a></dt>
+<dd><p>block size for parallel running, split non-seed reads into small files, the maximum size of each file is <code class="docutils literal notranslate"><span class="pre">blocksize</span></code>. (default: 10g)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-pa_correction">
+<span id="cmdoption-arg-pa-correction"></span><span class="sig-name descname"><span class="pre">pa_correction</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">3</span></span><a class="headerlink" href="#cmdoption-arg-pa_correction" title="Permalink to this definition"></a></dt>
+<dd><p>number of corrected tasks used to run in parallel, each corrected task requires ~TOTAL_INPUT_BASES/4 bytes of memory usage, overwrite <code class="docutils literal notranslate"><span class="pre">parallel_jobs</span></code> only for this step. (default: 3)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-minimap2_options_raw">
+<span id="cmdoption-arg-minimap2-options-raw"></span><span class="sig-name descname"><span class="pre">minimap2_options_raw</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">-t</span> <span class="pre">10</span></span><a class="headerlink" href="#cmdoption-arg-minimap2_options_raw" title="Permalink to this definition"></a></dt>
+<dd><p>minimap2 options, used to find overlaps between raw reads, see <a class="reference internal" href="UTILITY.html#minimap2-nd"><span class="std std-ref">minimap2-nd</span></a> for details.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-sort_options">
+<span id="cmdoption-arg-sort-options"></span><span class="sig-name descname"><span class="pre">sort_options</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">-m</span> <span class="pre">40g</span> <span class="pre">-t</span> <span class="pre">10</span></span><a class="headerlink" href="#cmdoption-arg-sort_options" title="Permalink to this definition"></a></dt>
+<dd><p>sort options, see <a class="reference internal" href="UTILITY.html#ovl-sort"><span class="std std-ref">ovl_sort</span></a> for details.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-correction_options">
+<span id="cmdoption-arg-correction-options"></span><span class="sig-name descname"><span class="pre">correction_options</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">-p</span> <span class="pre">10</span></span><a class="headerlink" href="#cmdoption-arg-correction_options" title="Permalink to this definition"></a></dt>
+<dd><p>correction options, see following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">p</span><span class="p">,</span> <span class="o">--</span><span class="n">process</span><span class="p">,</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">processes</span> <span class="n">used</span> <span class="k">for</span> <span class="n">correcting</span><span class="o">.</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span>
+<span class="o">-</span><span class="n">b</span><span class="p">,</span> <span class="o">--</span><span class="n">blacklist</span><span class="p">,</span> <span class="n">disable</span> <span class="n">the</span> <span class="nb">filter</span> <span class="n">step</span> <span class="ow">and</span> <span class="n">increase</span> <span class="n">more</span> <span class="n">corrected</span> <span class="n">data</span><span class="o">.</span>
+<span class="o">-</span><span class="n">s</span><span class="p">,</span> <span class="o">--</span><span class="n">split</span><span class="p">,</span> <span class="n">split</span> <span class="n">the</span> <span class="n">corrected</span> <span class="n">seed</span> <span class="k">with</span> <span class="n">un</span><span class="o">-</span><span class="n">corrected</span> <span class="n">regions</span><span class="o">.</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="kc">False</span><span class="p">)</span>
+<span class="o">-</span><span class="n">fast</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">-</span><span class="mi">1</span> <span class="n">times</span> <span class="n">faster</span> <span class="n">mode</span> <span class="k">with</span> <span class="n">a</span> <span class="n">little</span> <span class="n">lower</span> <span class="n">accuracy</span><span class="o">.</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="kc">False</span><span class="p">)</span>
+<span class="o">-</span><span class="n">dbuf</span><span class="p">,</span> <span class="n">disable</span> <span class="n">caching</span> <span class="mi">2</span><span class="n">bit</span> <span class="n">files</span> <span class="ow">and</span> <span class="n">reduce</span> <span class="o">~</span><span class="n">TOTAL_INPUT_BASES</span><span class="o">/</span><span class="mi">4</span> <span class="nb">bytes</span> <span class="n">of</span> <span class="n">memory</span> <span class="n">usage</span><span class="o">.</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span><span class="kc">False</span><span class="p">)</span>
+<span class="o">-</span><span class="n">max_lq_length</span><span class="p">,</span> <span class="n">maximum</span> <span class="n">length</span> <span class="n">of</span> <span class="n">a</span> <span class="n">continuous</span> <span class="n">low</span> <span class="n">quality</span> <span class="n">region</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">corrected</span> <span class="n">seed</span><span class="p">,</span> <span class="n">larger</span> <span class="n">max_lq_length</span> <span class="n">will</span> <span class="n">produce</span> <span class="n">more</span> <span class="n">corrected</span> <span class="n">data</span> <span class="k">with</span> <span class="n">lower</span> <span class="n">accuracy</span><span class="o">.</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="n">auto</span> <span class="p">[</span><span class="n">pb</span><span class="o">/</span><span class="mi">1</span><span class="n">k</span><span class="p">,</span> <span class="n">ont</span><span class="o">/</span><span class="mi">10</span><span class="n">k</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div></blockquote>
+</section>
+<section id="assembly-options">
+<h3>Assembly options<a class="headerlink" href="#assembly-options" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-minimap2_options_cns">
+<span id="cmdoption-arg-minimap2-options-cns"></span><span class="sig-name descname"><span class="pre">minimap2_options_cns</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">-t</span> <span class="pre">8</span> <span class="pre">-k17</span> <span class="pre">-w17</span></span><a class="headerlink" href="#cmdoption-arg-minimap2_options_cns" title="Permalink to this definition"></a></dt>
+<dd><p>minimap2 options, used to find overlaps between corrected reads.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-minimap2_options_map">
+<span id="cmdoption-arg-minimap2-options-map"></span><span class="sig-name descname"><span class="pre">minimap2_options_map</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">-t</span> <span class="pre">10</span></span><a class="headerlink" href="#cmdoption-arg-minimap2_options_map" title="Permalink to this definition"></a></dt>
+<dd><p>minimap2 options, used to map reads back to the assembly.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-nextgraph_options">
+<span id="cmdoption-arg-nextgraph-options"></span><span class="sig-name descname"><span class="pre">nextgraph_options</span></span><span class="sig-prename descclassname"> <span class="pre">=</span> <span class="pre">-a</span> <span class="pre">1</span></span><a class="headerlink" href="#cmdoption-arg-nextgraph_options" title="Permalink to this definition"></a></dt>
+<dd><p>nextgraph options, see <a class="reference internal" href="UTILITY.html#nextgraph"><span class="std std-ref">nextgraph</span></a> for details.</p>
+</dd></dl>
+
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="TEST1.html" class="btn btn-neutral float-left" title="Assemble the genome of HG002_NA24385_son using NextDenovo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="UTILITY.html" class="btn btn-neutral float-right" title="Utilities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, jiang.
+      <span class="commit">Revision <code>0e5fa5da</code>.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+  
+<script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
