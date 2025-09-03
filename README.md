@@ -1,2 +1,1 @@
-# HAST
-HiFi-C Accelerated Scaffolding Tool
+# HAST : HiFi-C Accelerated Scaffolding Tool
