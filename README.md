@@ -1,7 +1,7 @@
 ## HAST : HiFi-C Accelerated Scaffolding Tool
 
 ## <span id="Introduction">Introduction</span>
-&emsp;&emsp;
+&emsp;&emsp;As an emerging high-resolution long-read chromosome conformation capture technique, HiFi-C currently lacks dedicated software tools. Researchers have to adapt pipelines designed for Pore-C, which may underestimate the true potential of HiFi-C data and negatively impact downstream analyses such as scaffolding. To address this issue, we have developed `HAST`, a tool specifically designed for efficient scaffolding using HiFi-C data. `HAST` also supports Pore-C data.
 
 ## <span id="Dependencies">Dependencies</span>
 Software:
@@ -38,10 +38,10 @@ options:
   -h, --help           show this help message and exit
   -r, --ref            contig genome
   -i, --fq_in          <fastq file>  HiFi-C/Pore-C data
-  -p, --map_params     <minimap2 align parameter> (if your data is Pore-C,set '-x map-ont' )
+  -p, --map_params     <minimap2 align parameter> (if your data is Pore-C,set "-x map-ont" )
   -t, --threads        number of threads
   -c, --chunk_size     Number of records per processing chunk, If the dataset is large, you can increase the `chunk_size` parameter.
-  -e, --enzyme_site    Enzyme recognition site: 'GATC' (MboI/DpnII), 'AAGCTT' (HindIII)
+  -e, --enzyme_site    Enzyme recognition site: GATC (MboI/DpnII), AAGCTT (HindIII)
   -d, --_3ddna_path    3ddna software path
   -o, --output_prefix  output prefix
 ```
