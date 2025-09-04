@@ -11,7 +11,7 @@
 - [Dependencies](#Dependencies)
 - [Installation](#installation)
 - [Quick start](#quick_start)
-- [OutPut File](#output)
+- [Output File](#output)
 - [Get help](#help)
 - [Citating](#Citaing)
 ## <span id="Dependencies">Dependencies</span>
@@ -58,7 +58,7 @@ options:
   -o, --output_prefix  output prefix
 ```
 
-## <span id="output">OutPut Files</span>
+## <span id="output">Output Files</span>
 Primary Output Files and Their Specifications
 
 ```
