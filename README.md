@@ -4,6 +4,7 @@
 &emsp;&emsp;As an emerging high-resolution long-read chromosome conformation capture technique, HiFi-C currently lacks dedicated software tools. Researchers have to adapt pipelines designed for Pore-C, which may underestimate the true potential of HiFi-C data and negatively impact downstream analyses such as scaffolding. To address this issue, we have developed `HAST`, a tool specifically designed for efficient scaffolding using HiFi-C data. `HAST` also supports Pore-C data.
 
 ## <span id="Overview">Overview</span>
+&emsp;&emsp;Given the substantial length of HiFi-C reads, we employed an analysis strategy involving in silico fragmentation at restriction enzyme cleavage sites prior to alignment.
 ![workflow](image/workflow.png)
 ## Table of contents
 - [Dependencies](#Dependencies)
@@ -18,6 +19,7 @@ Software:
 - [minimap2](https://github.com/lh3/minimap2)
 - [3d-dna](https://github.com/aidenlab/3d-dna)
 - [parallel](https://www.gnu.org/software/parallel)
+- [juicebox](https://github.com/aidenlab/Juicebox)
 
 ## <span id="Installation">Installation</span>
 
