@@ -60,6 +60,7 @@ options:
 ## <span id="help">Get help</span>
 ### Help
 Feel free to raise an issue at the [isssue page](https://github.com/zskey-zn/HAST/issues)
+
 `Note:` Please ask questions on the issue page first. They are also helpful to other users.
 ### Contact
 For addtional help, please send an email to zhengshang@frasergen.com
