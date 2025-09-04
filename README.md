@@ -59,12 +59,10 @@ options:
 ```
 
 ## <span id="output">OutPut Files</span>
+Primary Output Files and Their Specifications
+
 ```
 .
-├── 00.fq_split
-│   └── your_species_enzyme_site_split.fq.gz
-├── 01.split_minimap
-│   └── your_species.paf
 ├── 02.paf2mnd
 │   ├── your_species.mnd.sort.txt
 │   ├── your_species.mnd.txt
