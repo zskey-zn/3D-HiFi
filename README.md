@@ -45,3 +45,14 @@ options:
   -d, --_3ddna_path    3ddna software path
   -o, --output_prefix  output prefix
 ```
+
+## <span id="help">Get help</span>
+### Help
+Feel free to raise an issue at the [isssue page](https://github.com/zskey-zn/HAST/issues)
+`Note:` Please ask questions on the issue page first. They are also helpful to other users.
+### Contact
+For addtional help, please send an email to zhengshang@frasergen.com
+
+## <span id="Citaing">Citating</span>
+If you use HAST in your work,please cite:
+
