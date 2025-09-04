@@ -33,6 +33,7 @@ def process_read_group(group, min_identity=0.75):
     fragments_set=set()
     dup_list=[]
     global group_dedup
+    group_dedup=[]
     # 1. 检查是否为唯一比对 - 只保留只有一个比对记录的分组
     if len(group) > 1:
         # 检查是否有重复的完整read ID（包括位置信息）
@@ -270,3 +271,4 @@ if __name__ == "__main__":
     sys.setrecursionlimit(10000)
     
     main()
+
