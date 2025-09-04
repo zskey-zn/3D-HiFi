@@ -5,7 +5,12 @@
 
 ## <span id="Overview">Overview</span>
 ![workflow](image/workflow.png)
-
+## Table of contents
+- [Dependencies](#Dependencies)
+- [Installation](#installation)
+- [Quick start](#quick_start)
+- [Get help](#help)
+- [Citating](#Citaing)
 ## <span id="Dependencies">Dependencies</span>
 Software:
 - [python >=3.7](https://www.python.org/)
