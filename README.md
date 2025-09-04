@@ -3,6 +3,9 @@
 ## <span id="Introduction">Introduction</span>
 &emsp;&emsp;As an emerging high-resolution long-read chromosome conformation capture technique, HiFi-C currently lacks dedicated software tools. Researchers have to adapt pipelines designed for Pore-C, which may underestimate the true potential of HiFi-C data and negatively impact downstream analyses such as scaffolding. To address this issue, we have developed `HAST`, a tool specifically designed for efficient scaffolding using HiFi-C data. `HAST` also supports Pore-C data.
 
+## <span id="Overview">Overview</span>
+![workflow](image/workflow.png)
+
 ## <span id="Dependencies">Dependencies</span>
 Software:
 - [python >=3.7](https://www.python.org/)
