@@ -11,6 +11,7 @@
 - [Dependencies](#Dependencies)
 - [Installation](#installation)
 - [Quick start](#quick_start)
+- [OutPut File](#output)
 - [Get help](#help)
 - [Citating](#Citaing)
 ## <span id="Dependencies">Dependencies</span>
@@ -55,6 +56,31 @@ options:
   -e, --enzyme_site    Enzyme recognition site: GATC (MboI/DpnII), AAGCTT (HindIII), CATG(NlaIII)
   -d, --_3ddna_path    3ddna software path
   -o, --output_prefix  output prefix
+```
+
+## <span id="output">OutPut Files</span>
+```
+.
+├── 00.fq_split
+│   └── your_species_enzyme_site_split.fq.gz
+├── 01.split_minimap
+│   └── your_species.paf
+├── 02.paf2mnd
+│   ├── your_species.mnd.sort.txt
+│   ├── your_species.mnd.txt
+│   ├── dups.txt
+│   ├── merged_nodups.txt  #nodups mnd file
+│   └── tmp
+├── 03.3ddna
+│   ├── contig.0.asm
+│   ├── contig.0_asm.scaffold_track.txt
+│   ├── contig.0_asm.superscaf_track.txt
+│   ├── contig.0.cprops
+│   ├── contig.0.assembly  #Input of Juicebox to manually correct
+│   ├── contig.0.hic       #Input of Juicebox to manually correct
+│   ├── contig.cprops
+│   └── contig.mnd.txt  
+└── read.summary          #reads mapping stat
 ```
 
 ## <span id="help">Get help</span>
