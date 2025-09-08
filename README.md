@@ -12,6 +12,7 @@
 - [Installation](#installation)
 - [Quick start](#quick_start)
 - [Output File](#output)
+- [Order and orient whole chromosomes using a reference genome](#refsort)
 - [Get help](#help)
 - [Citating](#Citaing)
 ## <span id="Dependencies">Dependencies</span>
@@ -22,6 +23,7 @@ Software:
 - [3d-dna](https://github.com/aidenlab/3d-dna)
 - [parallel](https://www.gnu.org/software/parallel)
 - [juicebox](https://github.com/aidenlab/Juicebox)
+- [mummer](https://github.com/mummer4/mummer)
 
 ## <span id="Installation">Installation</span>
 
@@ -80,6 +82,39 @@ Primary Output Files and Their Specifications
 │   └── contig.mnd.txt  
 └── read.summary          #reads mapping stat
 ```
+## <span id="refsort">Order and orient whole chromosomes using a reference genome</span>
+HAST has introduced a separate pipeline to order and orient whole chromosomes according to a reference genome.
+
+To begin, you should get draft chromosomes genome by `.assembly` file which is juicebox manually corrected.
+```bash
+#set chromosome num
+$ chr_num=3
+#Can get contig.0.review.fasta(draft chromosomes genome) and contig.0.review.order(Chromosome-contig correspondence table).
+$ python3 /path/to/HAST/script/ass2fasta.py --assembly contig.0.review.assembly --ref contig.fa -n $chr_num
+#If don't have closely related chromosomes genome, can sort in descending order by Chromosome length by adding "--sort" parameter，will obtain the contig.0.review_sort.assembly file(sorted assembly file) as an additional output.
+$ python3 /path/to/HAST/script/ass2fasta.py --assembly contig.0.review.assembly --ref contig.fa -n $chr_num --sort
+```
+
+Then use [mummer](https://github.com/mummer4/mummer) align draft chromosomes genome to  a chromosome-level reference genome. The reference genome can be from the same species or a closely related one:
+```bash
+$ ref=/path/to/closely_related.genome.fa
+$ query=contig.0.review.fasta
+$ prefix=your_species
+$ nucmer --mum -l 100 -c 1000 -D 5 -t 16 $ref $query -p $prefix  # *** you should change the paramenter when your genome is too large ,like  -l 500
+$ delta-filter  ${prefix}.delta -1 > ${prefix}.best.delta  # if has noisy ,you can add -i -o -l paramenter ,like  -i 95 -o 95 -l 150
+$ mummerplot -p $prefix -f ${prefix}.best.delta -t postscript
+$ show-coords -THrd ${prefix}.best.delta > ${prefix}.best.delta.coord
+$ /usr/bin/ps2pdf ${prefix}.ps ${prefix}.pdf
+#Generate the correspondence table(correspond_table), can fixed by ${prefix}.pdf
+$ python3 /path/to/HAST/script/mummer2table.py -i ${prefix}.best.delta.coord
+```
+
+Finally, generate the final file based on the correspondence table.
+```bash
+$ python3 /path/to/HAST/script/chrom_correspond.py --correspond-table correspond_table --review-assembly contig.0.review.assembly --output-assembly contig.0.correspond.assembly
+```
+
+
 
 ## <span id="help">Get help</span>
 ### Help
