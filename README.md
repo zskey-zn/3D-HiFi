@@ -13,8 +13,10 @@
 - [Quick start](#quick_start)
 - [Output File](#output)
 - [Order and orient whole chromosomes using a reference genome](#refsort)
+- [Visualization and Final genome](#visualization)
 - [Get help](#help)
 - [Citating](#Citaing)
+
 ## <span id="Dependencies">Dependencies</span>
 Software:
 - [python >=3.7](https://www.python.org/)
@@ -145,7 +147,7 @@ The blurriness of the heatmap can be mitigated by lowering the `-r` parameter in
 #Fixed (-r) parameter in new_mnd_and_visualizer.sh
 $ sh new_mnd_and_visualizer.sh
 #Can set new resolution(-rslu) to generate new contact maps; 
-$ python3 /path/to/HAST/script/hic_viewer.py --hicfile your_species.hic --ref your_species_chrom.fasta --rslu 500000 --outpfix your_species --norm KR
+$ python3 /path/to/HAST/script/hic_viewer.py --hicfile your_species.hic --ref your_species_chrom.fasta --rslu 100000 --outpfix your_species --norm KR
 $ Also can change normalization method. choices from 'KR', 'VC', 'VC_SQRT' and 'NONE'
 $ python3 /path/to/HAST/script/hic_viewer.py --hicfile your_species.hic --ref your_species_chrom.fasta --rslu 100000 --outpfix your_species --norm VC
 ```
