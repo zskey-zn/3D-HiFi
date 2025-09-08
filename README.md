@@ -89,7 +89,7 @@ To begin, you should get draft chromosomes genome by `.assembly` file which is j
 ```bash
 #set chromosome num
 $ chr_num=3
-#Can get contig.0.review.fasta(draft chromosomes genome) and contig.0.review.order(Chromosome-contig correspondence table).
+#Can get contig.0.review.fasta(draft chromosomes genome) and contig.0.review.order(Genome-contig correspondence table).
 $ python3 /path/to/HAST/script/ass2fasta.py --assembly contig.0.review.assembly --ref contig.fa -n $chr_num
 #If don't have closely related chromosomes genome, can sort in descending order by Chromosome length by adding "--sort" parameter，will obtain the contig.0.review_sort.assembly file(sorted assembly file) as an additional output.
 $ python3 /path/to/HAST/script/ass2fasta.py --assembly contig.0.review.assembly --ref contig.fa -n $chr_num --sort
@@ -114,7 +114,41 @@ Finally, generate the final file based on the correspondence table.
 $ python3 /path/to/HAST/script/chrom_correspond.py --correspond-table correspond_table --review-assembly contig.0.review.assembly --output-assembly contig.0.correspond.assembly
 ```
 
+## <span id="visualization">Visualization and Final genome</span>
 
+Generate highly customizable contact maps and Final genome
+```bash
+$ correspond_assembly=contig.0.correspond.assembly
+$ mnd_path=/path/02.paf2mnd/merged_nodups.txt
+$ resolution=500000
+$ sample_name=your_species
+$ chr_count=3
+$ _3ddna_path=/path/to/3d-dna
+$ python3 /path/to/HAST/script/post_review.py -r contig.fa -a ${correspond_assembly} -e ${resolution} -m ${mnd_path} -c ${chr_count} -s${sample_name} --3ddna_path ${_3ddna_path}
+```
+
+Primary Output Files and Their Specifications
+```
+.
+├── your_species.fasta        #Final genome
+├── your_species.order        #Genome-contig correspondence table
+├── your_species_chrom.fasta  #Final genome(Only Chromosome part)
+├── your_species_chrom.order  #Chromosome-contig correspondence table(Only Chromosome part)
+├── new_mnd_and_visualizer.sh #Script which generate new hic file 
+├── your_species.hic          #new hic file
+├── hic_viewer.sh             #Script which plot contact maps
+└── your_species.pdf          #Contact maps
+```
+
+The blurriness of the heatmap can be mitigated by lowering the `-r` parameter in the `new_mnd_and_visualizer.sh` script to generate new `your_species.hic` file, then generate new contact maps
+```bash
+#Fixed (-r) parameter in new_mnd_and_visualizer.sh
+$ sh new_mnd_and_visualizer.sh
+#Can set new resolution(-rslu) to generate new contact maps; 
+$ python3 /path/to/HAST/script/hic_viewer.py --hicfile your_species.hic --ref your_species_chrom.fasta --rslu 500000 --outpfix your_species --norm KR
+$ Also can change normalization method. choices from 'KR', 'VC', 'VC_SQRT' and 'NONE'
+$ python3 /path/to/HAST/script/hic_viewer.py --hicfile your_species.hic --ref your_species_chrom.fasta --rslu 100000 --outpfix your_species --norm VC
+```
 
 ## <span id="help">Get help</span>
 ### Help
