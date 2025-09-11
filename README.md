@@ -22,6 +22,7 @@ Software:
 - [python >=3.7](https://www.python.org/)
 - [pigz](http://zlib.net/pigz/)
 - [minimap2](https://github.com/lh3/minimap2)
+- [seqkit](https://bioinf.shenwei.me/seqkit)
 - [3d-dna](https://github.com/aidenlab/3d-dna)
 - [parallel](https://www.gnu.org/software/parallel)
 - [juicebox](https://github.com/aidenlab/Juicebox)
@@ -60,6 +61,7 @@ options:
   -e, --enzyme_site    Enzyme recognition site: GATC (MboI/DpnII), AAGCTT (HindIII), CATG(NlaIII)
   -d, --_3ddna_path    3ddna software path
   -o, --output_prefix  output prefix
+  -a, --polyploid      Enable polyploid mode (default: disabled)
 ```
 
 ## <span id="output">Output Files</span>
