@@ -61,7 +61,7 @@ options:
   -e, --enzyme_site    Enzyme recognition site: GATC (MboI/DpnII), AAGCTT (HindIII), CATG(NlaIII)
   -d, --_3ddna_path    3ddna software path
   -o, --output_prefix  output prefix
-  -a, --polyploid      Enable polyploid mode (default: disabled)
+  -a, --polyploid      Enable polyploid mode can rescue collapsed contigs  (default: disabled)
 ```
 
 ## <span id="output">Output Files</span>
