@@ -4,16 +4,17 @@ set -e  # 任何命令失败则退出
 
 # 帮助信息函数
 usage() {
-    echo "使用方法: $0 -r PATH/contig.fa -i PATH/HiFi-C.fq.gz -p '-x map-hifi' -t 30 -c 10000 -e GATC -d PATH/3d-dna -o species"
-    echo "  -r|--ref 		<contig genome> "
-    echo "  -i|--fq_in 		<fastq file>  HiFi-C/Pore-C data "
-    echo "  -p|--map_params 	<minimap2 align parameter > "
-    echo "  -t|--threads	number of threads "
-    echo "  -c|--chunk_size	Number of records per processing chunk "
-    echo "  -e|--enzyme_site	Enzyme recognition site (e.g., GATC) "
-    echo "  -d|--_3ddna_path	3ddna software path "
+    echo "Usage: $0 -r PATH/contig.fa -i PATH/HiFi-C.fq.gz -p '-x map-hifi' -t 30 -c 10000 -e GATC -d PATH/3d-dna -o species"
+    echo "  -h|--help           show this help message and exit"
+    echo "  -r|--ref            <contig genome> "
+    echo "  -i|--fq_in          <fastq file>  HiFi-C/Pore-C data "
+    echo "  -p|--map_params     <minimap2 align parameter > "
+    echo "  -t|--threads        Number of threads "
+    echo "  -c|--chunk_size     Number of records per processing chunk. If the dataset is large, you can increase the chunk_size parameter"
+    echo "  -e|--enzyme_site    Enzyme recognition site : GATC (MboI/DpnII), AAGCTT (HindIII), CATG(NlaIII)"
+    echo "  -d|--_3ddna_path    3ddna software path "
     echo "  -o|--output_prefix	output prefix "
-    echo "  -h                 显示此帮助信息 "
+    echo "  -a|--polyploid      Enable polyploid mode can rescue collapsed contigs (default: disabled)"
     echo ""
     exit 0
 }
@@ -26,6 +27,7 @@ threads=""
 chunk_size=""
 _3ddna_path=""
 output_prefix=""
+polyploid=false  # 默认不启用多倍体模式
 
 # 手动解析参数
 while [[ $# -gt 0 ]]; do
@@ -53,15 +55,19 @@ while [[ $# -gt 0 ]]; do
         -e|--enzyme_site)
             enzyme_site="$2"
             shift 2
-            ;;     
+            ;;
         -d|--_3ddna_path)
             _3ddna_path="$2"
             shift 2
-            ;;    
+            ;;
         -o|--output_prefix)
             output_prefix="$2"
             shift 2
-            ;;            
+            ;;
+        -a|--polyploid)
+            polyploid=true
+            shift
+            ;;
         -h|--help)
             usage
             ;;
@@ -115,20 +121,45 @@ minimap2 ${map_params} -c --secondary=no $ref ../00.fq_split/${output_prefix}_en
 cd "$initial_dir"
 mkdir -p 02.paf2mnd
 cd 02.paf2mnd
-python3 ${script_dir}/script/paf2mnd.py ../01.split_minimap/${output_prefix}.paf ${output_prefix}.mnd.txt -m 0.75 -c 5000000 -w $threads
+python3 ${script_dir}/script/paf2mnd.py ../01.split_minimap/${output_prefix}.paf ${output_prefix}.mnd.txt -m 0.75 -c 500000 -w $threads
 
-# dedup
-mkdir -p tmp
-p=$(pwd)"/"
-sort -T ./tmp -m -k2,2d -k6,6d -k4,4n -k8,8n -k1,1n -k5,5n -k3,3n ${output_prefix}.mnd.txt > ${output_prefix}.mnd.sort.txt
-awk -f ${script_dir}/script/dups.awk -v name=$p ${output_prefix}.mnd.sort.txt
+if [ "$polyploid" = true ]; then
+    cd ../01.split_minimap
+    seqkit fx2tab -l -n -i $ref  > ${output_prefix}.len
+    awk 'NR==FNR{contig_l[$1]=$2;genome_size+=$2}NR>FNR{contig_map[$6]+=($9-$8+1);genome_map+=($9-$8+1)}END{for(i in contig_map){print i,contig_map[i]/contig_l[i],genome_map/genome_size}}' ${output_prefix}.len ${output_prefix}.paf > contig.depth
+    awk '$2>=$3*1.5{print $1}' contig.depth > collapsed.contig.list
+    seqkit grep -f collapsed.contig.list $ref | seqkit seq -w0 | awk 'NR%2==1{print $1"_d2"}NR%2==0{print}' | seqkit seq $ref - | seqkit sort > contig.dup.fasta
 
-cd "$initial_dir"
-mkdir -p 03.3ddna
-cd 03.3ddna
-TMPDIR='./'
+    cd ../02.paf2mnd
+    awk -v OFS="\t" 'NR==FNR{a[$1]=1}NR>FNR&&a[$2]&&a[$6]{$2=$2"_d2";$6=$6"_d2";print $0}' ../01.split_minimap/collapsed.contig.list ${output_prefix}.mnd.txt > ${output_prefix}.mnd.dup.txt
+    awk -v OFS="\t" 'NR==FNR{a[$1]=1}NR>FNR&&a[$2]{$2=$2"_d2";print $0}' ../01.split_minimap/collapsed.contig.list ${output_prefix}.mnd.txt >> ${output_prefix}.mnd.dup.txt
+    awk -v OFS="\t" 'NR==FNR{a[$1]=1}NR>FNR&&a[$6]{$6=$6"_d2";print $0}' ../01.split_minimap/collapsed.contig.list ${output_prefix}.mnd.txt >> ${output_prefix}.mnd.dup.txt
+    cat ${output_prefix}.mnd.txt >> ${output_prefix}.mnd.dup.txt
+    # dedup
+    mkdir -p tmp
+    p=$(pwd)"/"
+    sort -T ./tmp -m -k2,2d -k6,6d -k4,4n -k8,8n -k1,1n -k5,5n -k3,3n ${output_prefix}.mnd.dup.txt > ${output_prefix}.mnd.sort.txt
+    awk -f ${script_dir}/script/dups.awk -v name=$p ${output_prefix}.mnd.sort.txt
 
-/usr/bin/bash ${_3ddna_path}/run-asm-pipeline.sh -r 0 --early-exit $ref ${initial_dir}/02.paf2mnd/merged_nodups.txt
+    cd ../03.3ddna
+    /usr/bin/bash ${_3ddna_path}/run-asm-pipeline.sh -r 0 -q 0 --early-exit ${initial_dir}/01.split_minimap/contig.dup.fasta  ${initial_dir}/02.paf2mnd/merged_nodups.txt
+
+else
+
+    # dedup
+    mkdir -p tmp
+    p=$(pwd)"/"
+    sort -T ./tmp -m -k2,2d -k6,6d -k4,4n -k8,8n -k1,1n -k5,5n -k3,3n ${output_prefix}.mnd.txt > ${output_prefix}.mnd.sort.txt
+    awk -f ${script_dir}/script/dups.awk -v name=$p ${output_prefix}.mnd.sort.txt
+
+    cd "$initial_dir"
+    mkdir -p 03.3ddna
+    cd 03.3ddna
+    TMPDIR='./'
+
+    /usr/bin/bash ${_3ddna_path}/run-asm-pipeline.sh -r 0 --early-exit $ref ${initial_dir}/02.paf2mnd/merged_nodups.txt
+
+fi
 
 #stat
 cd "$initial_dir"
