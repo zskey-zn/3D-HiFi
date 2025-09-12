@@ -67,7 +67,7 @@ options:
 ##<span id="comparison">Comparison</span>
 The following table summarizes a performance comparison of HAST against other tools (wf-pore-c and Cphasing) across various biological datasets, detailing metrics such as valid reads, processing time, and memory usage.
 
-<table style="width: 100%; table-layout: fixed;">
+<table style="width: 120%; table-layout: fixed;">
   <thead>
     <tr>
       <th style="width: 15%;">Dataset</th>
