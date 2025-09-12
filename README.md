@@ -74,7 +74,7 @@ The following table summarizes a performance comparison of HAST against other to
       <th style="width: 10%;">Software</th>
       <th style="width: 12%;">Dedup valid reads</th>
       <th style="width: 12%;">Pairs number</th>
-      <th style="width: 12%;">pairs num/reads num</th>
+      <th style="width: 8%;">pairs num/reads num</th>
       <th style="width: 8%;">Wall time</th>
       <th style="width: 8%;">RAM</th>
     </tr>
