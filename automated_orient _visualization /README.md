@@ -4,7 +4,7 @@ This README provides details on applying automated ordering, orienting, and visu
 
 ## How to run
 ```
-Usage: ./automated_orient__visualization_pipeline.sh [options]
+Usage: ./automated_orient_visualization_pipeline.sh [options]
 
 Required options:
   -c, --contig FILE        Input contig file path (absolute path required)
