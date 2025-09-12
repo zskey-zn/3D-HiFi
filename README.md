@@ -67,21 +67,30 @@ options:
 ##<span id="comparison">Comparison</span>
 The following table summarizes a performance comparison of HAST against other tools (wf-pore-c and Cphasing) across various biological datasets, detailing metrics such as valid reads, processing time, and memory usage.
 
-<table style="width: 100%; table-layout: fixed;">
+<table style="width: 100%; table-layout: fixed; border-collapse: collapse;">
+  <colgroup>
+    <col style="width: 15%">
+    <col style="width: 10%">
+    <col style="width: 12%">
+    <col style="width: 12%">
+    <col style="width: 12%">
+    <col style="width: 10%">
+    <col style="width: 8%">
+  </colgroup>
   <thead>
     <tr>
-      <th style="width: 15%;">Dataset</th>
-      <th style="width: 10%;">Software</th>
-      <th style="width: 12%;">Dedup valid reads</th>
-      <th style="width: 12%;">Pairs number</th>
-      <th style="width: 12%;">pairs num/reads num</th>
-      <th style="width: 10%;">Wall time</th>
-      <th style="width: 8%;">RAM</th>
+      <th style="padding: 8px; text-align: left; border-bottom: 2px solid #ddd;">Dataset</th>
+      <th style="padding: 8px; text-align: left; border-bottom: 2px solid #ddd;">Software</th>
+      <th style="padding: 8px; text-align: right; border-bottom: 2px solid #ddd;">Dedup valid reads</th>
+      <th style="padding: 8px; text-align: right; border-bottom: 2px solid #ddd;">Pairs number</th>
+      <th style="padding: 8px; text-align: right; border-bottom: 2px solid #ddd;">pairs num/reads num</th>
+      <th style="padding: 8px; text-align: left; border-bottom: 2px solid #ddd;">Wall time</th>
+      <th style="padding: 8px; text-align: left; border-bottom: 2px solid #ddd;">RAM</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td rowspan="3" style="word-wrap: break-word;"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14654081" target="_blank">Ceratitis_capitata</a></td>
+      <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; word-wrap: break-word;"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14654081" target="_blank">Ceratitis_capitata</a></td>
       <td>HAST</td>
       <td>1,185,394</td>
       <td>11,508,130</td>
