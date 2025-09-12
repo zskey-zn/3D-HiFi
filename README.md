@@ -69,7 +69,7 @@ The following table summarizes a performance comparison of HAST against other to
 
 <table style="width: 100%; table-layout: fixed; border-collapse: collapse;">
   <colgroup>
-    <col style="width: 15%">
+    <col style="width: 18%">
     <col style="width: 10%">
     <col style="width: 12%">
     <col style="width: 12%">
@@ -90,129 +90,129 @@ The following table summarizes a performance comparison of HAST against other to
   </thead>
   <tbody>
     <tr>
-      <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; word-wrap: break-word;"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14654081" target="_blank">Ceratitis_capitata</a></td>
+      <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14654081" target="_blank">Ceratitis capitata</a></td>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
-      <td>1,185,394</td>
-      <td>11,508,130</td>
-      <td>8.75</td>
-      <td>32min</td>
-      <td>42G</td>
+      <td style="padding: 8px; text-align: right;">1,185,394</td>
+      <td style="padding: 8px; text-align: right;">11,508,130</td>
+      <td style="padding: 8px; text-align: right;">8.75</td>
+      <td style="padding: 8px; text-align: left;">32min</td>
+      <td style="padding: 8px; text-align: left;">42G</td>
     </tr>
     <tr>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">wf-pore-c</td>
-      <td>1,163,280</td>
-      <td>3,264,519</td>
-      <td>2.48</td>
-      <td>2.5h</td>
-      <td>39G</td>
+      <td style="padding: 8px; text-align: right;">1,163,280</td>
+      <td style="padding: 8px; text-align: right;">3,264,519</td>
+      <td style="padding: 8px; text-align: right;">2.48</td>
+      <td style="padding: 8px; text-align: left;">2.5h</td>
+      <td style="padding: 8px; text-align: left;">39G</td>
     </tr>
     <tr>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">Cphasing</td>
-      <td>1,015,477</td>
-      <td>5,888,352</td>
-      <td>4.48</td>
-      <td>48min</td>
-      <td>42G</td>
+      <td style="padding: 8px; text-align: right;">1,015,477</td>
+      <td style="padding: 8px; text-align: right;">5,888,352</td>
+      <td style="padding: 8px; text-align: right;">4.48</td>
+      <td style="padding: 8px; text-align: left;">48min</td>
+      <td style="padding: 8px; text-align: left;">42G</td>
     </tr>
     <tr>
-      <td rowspan="3"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14654111" target="_blank">Anopheles_coluzzii</a></td>
+      <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14654111" target="_blank">Anopheles coluzzii</a></td>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
-      <td>2,282,982</td>
-      <td>64,712,163</td>
-      <td>27.35</td>
-      <td>1.2h</td>
-      <td>70G</td>
+      <td style="padding: 8px; text-align: right;">2,282,982</td>
+      <td style="padding: 8px; text-align: right;">64,712,163</td>
+      <td style="padding: 8px; text-align: right;">27.35</td>
+      <td style="padding: 8px; text-align: left;">1.2h</td>
+      <td style="padding: 8px; text-align: left;">70G</td>
     </tr>
     <tr>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">wf-pore-c</td>
-      <td>2,159,056</td>
-      <td>9,216,303</td>
-      <td>3.90</td>
-      <td>3.5h</td>
-      <td>65G</td>
+      <td style="padding: 8px; text-align: right;">2,159,056</td>
+      <td style="padding: 8px; text-align: right;">9,216,303</td>
+      <td style="padding: 8px; text-align: right;">3.90</td>
+      <td style="padding: 8px; text-align: left;">3.5h</td>
+      <td style="padding: 8px; text-align: left;">65G</td>
     </tr>
     <tr>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">Cphasing</td>
-      <td>2,258,817</td>
-      <td>50,310,732</td>
-      <td>21.27</td>
-      <td>1.2h</td>
-      <td>67G</td>
+      <td style="padding: 8px; text-align: right;">2,258,817</td>
+      <td style="padding: 8px; text-align: right;">50,310,732</td>
+      <td style="padding: 8px; text-align: right;">21.27</td>
+      <td style="padding: 8px; text-align: left;">1.2h</td>
+      <td style="padding: 8px; text-align: left;">67G</td>
     </tr>
     <tr>
-      <td rowspan="3"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14275147" target="_blank">Homo_sapien</a></td>
+      <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14275147" target="_blank">Homo sapien</a></td>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
-      <td>9,198,589</td>
-      <td>720,830,448</td>
-      <td>78.28</td>
-      <td>1d5h</td>
-      <td>147G</td>
+      <td style="padding: 8px; text-align: right;">9,198,589</td>
+      <td style="padding: 8px; text-align: right;">720,830,448</td>
+      <td style="padding: 8px; text-align: right;">78.28</td>
+      <td style="padding: 8px; text-align: left;">1d5h</td>
+      <td style="padding: 8px; text-align: left;">147G</td>
     </tr>
     <tr>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">wf-pore-c</td>
-      <td>8,743,704</td>
-      <td>46,912,773</td>
-      <td>5.09</td>
-      <td>1d7h</td>
-      <td>61G</td>
+      <td style="padding: 8px; text-align: right;">8,743,704</td>
+      <td style="padding: 8px; text-align: right;">46,912,773</td>
+      <td style="padding: 8px; text-align: right;">5.09</td>
+      <td style="padding: 8px; text-align: left;">1d7h</td>
+      <td style="padding: 8px; text-align: left;">61G</td>
     </tr>
     <tr>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">Cphasing</td>
-      <td>9,144,776</td>
-      <td>364,842,740</td>
-      <td>39.62</td>
-      <td>17.9h</td>
-      <td>128G</td>
+      <td style="padding: 8px; text-align: right;">9,144,776</td>
+      <td style="padding: 8px; text-align: right;">364,842,740</td>
+      <td style="padding: 8px; text-align: right;">39.62</td>
+      <td style="padding: 8px; text-align: left;">17.9h</td>
+      <td style="padding: 8px; text-align: left;">128G</td>
     </tr>
     <tr>
-      <td rowspan="3"><a href="https://www.ncbi.nlm.nih.gov/sra/SRR29580843" target="_blank">Plecia_longiforceps</a></td>
+      <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/SRR29580843" target="_blank">Plecia longiforceps</a></td>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
-      <td>15,223,238</td>
-      <td>143,783,824</td>
-      <td>6.03</td>
-      <td>4.7h</td>
-      <td>96G</td>
+      <td style="padding: 8px; text-align: right;">15,223,238</td>
+      <td style="padding: 8px; text-align: right;">143,783,824</td>
+      <td style="padding: 8px; text-align: right;">6.03</td>
+      <td style="padding: 8px; text-align: left;">4.7h</td>
+      <td style="padding: 8px; text-align: left;">96G</td>
     </tr>
     <tr>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">wf-pore-c</td>
-      <td>13,474,187</td>
-      <td>35,116,293</td>
-      <td>1.47</td>
-      <td>11.2h</td>
-      <td>86G</td>
+      <td style="padding: 8px; text-align: right;">13,474,187</td>
+      <td style="padding: 8px; text-align: right;">35,116,293</td>
+      <td style="padding: 8px; text-align: right;">1.47</td>
+      <td style="padding: 8px; text-align: left;">11.2h</td>
+      <td style="padding: 8px; text-align: left;">86G</td>
     </tr>
     <tr>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">Cphasing</td>
-      <td>12,793,521</td>
-      <td>69,399,906</td>
-      <td>2.91</td>
-      <td>3.8h</td>
-      <td>88G</td>
+      <td style="padding: 8px; text-align: right;">12,793,521</td>
+      <td style="padding: 8px; text-align: right;">69,399,906</td>
+      <td style="padding: 8px; text-align: right;">2.91</td>
+      <td style="padding: 8px; text-align: left;">3.8h</td>
+      <td style="padding: 8px; text-align: left;">88G</td>
     </tr>
     <tr>
-      <td rowspan="3"><a href="https://www.ncbi.nlm.nih.gov/sra/SRR28905076" target="_blank">Rosa_hybrida</a></td>
+      <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/SRR28905076" target="_blank">Rosa hybrida</a></td>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
-      <td>13,338,018</td>
-      <td>539,607,578</td>
-      <td>37.38</td>
-      <td>16.2h</td>
-      <td>82G</td>
+      <td style="padding: 8px; text-align: right;">13,338,018</td>
+      <td style="padding: 8px; text-align: right;">539,607,578</td>
+      <td style="padding: 8px; text-align: right;">37.38</td>
+      <td style="padding: 8px; text-align: left;">16.2h</td>
+      <td style="padding: 8px; text-align: left;">82G</td>
     </tr>
     <tr>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">wf-pore-c</td>
-      <td>10,956,145</td>
-      <td>37,981,725</td>
-      <td>2.63</td>
-      <td>1d2h</td>
-      <td>53G</td>
+      <td style="padding: 8px; text-align: right;">10,956,145</td>
+      <td style="padding: 8px; text-align: right;">37,981,725</td>
+      <td style="padding: 8px; text-align: right;">2.63</td>
+      <td style="padding: 8px; text-align: left;">1d2h</td>
+      <td style="padding: 8px; text-align: left;">53G</td>
     </tr>
     <tr>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">Cphasing</td>
-      <td>7,846,147</td>
-      <td>53,071,524</td>
-      <td>3.68</td>
-      <td>5.6h</td>
-      <td>71G</td>
+      <td style="padding: 8px; text-align: right;">7,846,147</td>
+      <td style="padding: 8px; text-align: right;">53,071,524</td>
+      <td style="padding: 8px; text-align: right;">3.68</td>
+      <td style="padding: 8px; text-align: left;">5.6h</td>
+      <td style="padding: 8px; text-align: left;">71G</td>
     </tr>
   </tbody>
 </table>
