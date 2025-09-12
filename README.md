@@ -222,22 +222,29 @@ Primary Output Files and Their Specifications
 
 ```
 .
+├── 01.split_minimap
+│   ├── your_species.paf        # minimap2 result
+│   ├── your_species.len        # contig size if you set --polyploid parameter
+│   ├── contig.depth            # depth average contig if you set --polyploid parameter
+│   ├── collapsed.contig.list   # collapsed contig list if you set --polyploid parameter
+│   └── contig.dup.fasta        # rescued contig genome if you set --polyploid parameter
 ├── 02.paf2mnd
-│   ├── your_species.mnd.sort.txt
 │   ├── your_species.mnd.txt
+│   ├── your_species.mnd.dup.txt # new mnd file if you set --polyploid parameter
+│   ├── your_species.mnd.sort.txt
 │   ├── dups.txt
-│   ├── merged_nodups.txt  #nodups mnd file
+│   ├── merged_nodups.txt        # nodups mnd file
 │   └── tmp
 ├── 03.3ddna
 │   ├── contig.0.asm
 │   ├── contig.0_asm.scaffold_track.txt
 │   ├── contig.0_asm.superscaf_track.txt
 │   ├── contig.0.cprops
-│   ├── contig.0.assembly  #Input of Juicebox to manually correct
-│   ├── contig.0.hic       #Input of Juicebox to manually correct
+│   ├── contig.0.assembly  # Input of Juicebox to manually correct
+│   ├── contig.0.hic       # Input of Juicebox to manually correct
 │   ├── contig.cprops
 │   └── contig.mnd.txt  
-└── read.summary          #reads mapping stat
+└── read.summary          # reads mapping stat
 ```
 ## <span id="refsort">Order and orient whole chromosomes using a reference genome</span>
 HAST has introduced a separate pipeline to order and orient whole chromosomes according to a reference genome.
