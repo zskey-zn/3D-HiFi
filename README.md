@@ -70,7 +70,7 @@ The following table summarizes a performance comparison of HAST against other to
 <table style="width: 120%; table-layout: fixed;">
   <thead>
     <tr>
-      <th style="width: 15%;">Dataset</th>
+      <th style="width: 20%;">Dataset</th>
       <th style="width: 10%;">Software</th>
       <th style="width: 12%;">Dedup valid reads</th>
       <th style="width: 12%;">Pairs number</th>
