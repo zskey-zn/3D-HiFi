@@ -70,10 +70,10 @@ The following table summarizes a performance comparison of HAST against other to
 <table style="width: 100%; table-layout: fixed; border-collapse: collapse;">
   <colgroup>
     <col style="width: 18%">
+    <col style="width: 16%">
     <col style="width: 12%">
     <col style="width: 12%">
-    <col style="width: 12%">
-    <col style="width: 12%">
+    <col style="width: 8%">
     <col style="width: 8%">
     <col style="width: 8%">
   </colgroup>
