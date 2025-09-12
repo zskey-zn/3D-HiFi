@@ -83,7 +83,7 @@ The following table summarizes a performance comparison of HAST against other to
       <th style="padding: 8px; text-align: left; border-bottom: 2px solid #ddd;">Software</th>
       <th style="padding: 8px; text-align: right; border-bottom: 2px solid #ddd;">Dedup valid reads</th>
       <th style="padding: 8px; text-align: right; border-bottom: 2px solid #ddd;">Pairs number</th>
-      <th style="padding: 8px; text-align: right; border-bottom: 2px solid #ddd;">pairs num/reads num</th>
+      <th style="padding: 8px; text-align: right; border-bottom: 2px solid #ddd;">pairs/reads</th>
       <th style="padding: 8px; text-align: left; border-bottom: 2px solid #ddd;">Wall time</th>
       <th style="padding: 8px; text-align: left; border-bottom: 2px solid #ddd;">RAM</th>
     </tr>
