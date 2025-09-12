@@ -91,7 +91,7 @@ The following table summarizes a performance comparison of HAST against other to
   <tbody>
     <tr>
       <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; word-wrap: break-word;"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14654081" target="_blank">Ceratitis_capitata</a></td>
-      <td>HAST</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
       <td>1,185,394</td>
       <td>11,508,130</td>
       <td>8.75</td>
@@ -99,7 +99,7 @@ The following table summarizes a performance comparison of HAST against other to
       <td>42G</td>
     </tr>
     <tr>
-      <td>wf-pore-c</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">wf-pore-c</td>
       <td>1,163,280</td>
       <td>3,264,519</td>
       <td>2.48</td>
@@ -107,7 +107,7 @@ The following table summarizes a performance comparison of HAST against other to
       <td>39G</td>
     </tr>
     <tr>
-      <td>Cphasing</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">Cphasing</td>
       <td>1,015,477</td>
       <td>5,888,352</td>
       <td>4.48</td>
@@ -116,7 +116,7 @@ The following table summarizes a performance comparison of HAST against other to
     </tr>
     <tr>
       <td rowspan="3"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14654111" target="_blank">Anopheles_coluzzii</a></td>
-      <td>HAST</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
       <td>2,282,982</td>
       <td>64,712,163</td>
       <td>27.35</td>
@@ -124,7 +124,7 @@ The following table summarizes a performance comparison of HAST against other to
       <td>70G</td>
     </tr>
     <tr>
-      <td>wf-pore-c</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">wf-pore-c</td>
       <td>2,159,056</td>
       <td>9,216,303</td>
       <td>3.90</td>
@@ -132,7 +132,7 @@ The following table summarizes a performance comparison of HAST against other to
       <td>65G</td>
     </tr>
     <tr>
-      <td>Cphasing</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">Cphasing</td>
       <td>2,258,817</td>
       <td>50,310,732</td>
       <td>21.27</td>
@@ -141,7 +141,7 @@ The following table summarizes a performance comparison of HAST against other to
     </tr>
     <tr>
       <td rowspan="3"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14275147" target="_blank">Homo_sapien</a></td>
-      <td>HAST</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
       <td>9,198,589</td>
       <td>720,830,448</td>
       <td>78.28</td>
@@ -149,7 +149,7 @@ The following table summarizes a performance comparison of HAST against other to
       <td>147G</td>
     </tr>
     <tr>
-      <td>wf-pore-c</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">wf-pore-c</td>
       <td>8,743,704</td>
       <td>46,912,773</td>
       <td>5.09</td>
@@ -157,7 +157,7 @@ The following table summarizes a performance comparison of HAST against other to
       <td>61G</td>
     </tr>
     <tr>
-      <td>Cphasing</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">Cphasing</td>
       <td>9,144,776</td>
       <td>364,842,740</td>
       <td>39.62</td>
@@ -166,7 +166,7 @@ The following table summarizes a performance comparison of HAST against other to
     </tr>
     <tr>
       <td rowspan="3"><a href="https://www.ncbi.nlm.nih.gov/sra/SRR29580843" target="_blank">Plecia_longiforceps</a></td>
-      <td>HAST</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
       <td>15,223,238</td>
       <td>143,783,824</td>
       <td>6.03</td>
@@ -174,7 +174,7 @@ The following table summarizes a performance comparison of HAST against other to
       <td>96G</td>
     </tr>
     <tr>
-      <td>wf-pore-c</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">wf-pore-c</td>
       <td>13,474,187</td>
       <td>35,116,293</td>
       <td>1.47</td>
@@ -182,7 +182,7 @@ The following table summarizes a performance comparison of HAST against other to
       <td>86G</td>
     </tr>
     <tr>
-      <td>Cphasing</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">Cphasing</td>
       <td>12,793,521</td>
       <td>69,399,906</td>
       <td>2.91</td>
@@ -191,7 +191,7 @@ The following table summarizes a performance comparison of HAST against other to
     </tr>
     <tr>
       <td rowspan="3"><a href="https://www.ncbi.nlm.nih.gov/sra/SRR28905076" target="_blank">Rosa_hybrida</a></td>
-      <td>HAST</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
       <td>13,338,018</td>
       <td>539,607,578</td>
       <td>37.38</td>
@@ -199,7 +199,7 @@ The following table summarizes a performance comparison of HAST against other to
       <td>82G</td>
     </tr>
     <tr>
-      <td>wf-pore-c</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">wf-pore-c</td>
       <td>10,956,145</td>
       <td>37,981,725</td>
       <td>2.63</td>
@@ -207,7 +207,7 @@ The following table summarizes a performance comparison of HAST against other to
       <td>53G</td>
     </tr>
     <tr>
-      <td>Cphasing</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">Cphasing</td>
       <td>7,846,147</td>
       <td>53,071,524</td>
       <td>3.68</td>
