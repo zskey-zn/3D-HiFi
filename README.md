@@ -64,7 +64,7 @@ options:
   -o, --output_prefix  output prefix
   -a, --polyploid      Enable polyploid mode can rescue collapsed contigs  (default: disabled)
 ```
-##<span id="comparison">Comparison</span>
+## <span id="comparison">Comparison</span>
 The following table summarizes a performance comparison of HAST against other tools (wf-pore-c and Cphasing) across various biological datasets, detailing metrics such as valid reads, processing time, and memory usage.
 
 <table style="width: 100%; table-layout: fixed; border-collapse: collapse;">
