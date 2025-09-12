@@ -141,6 +141,7 @@ if [ "$polyploid" = true ]; then
     sort -T ./tmp -m -k2,2d -k6,6d -k4,4n -k8,8n -k1,1n -k5,5n -k3,3n ${output_prefix}.mnd.dup.txt > ${output_prefix}.mnd.sort.txt
     awk -f ${script_dir}/script/dups.awk -v name=$p ${output_prefix}.mnd.sort.txt
 
+    mkdir -p ../03.3ddna
     cd ../03.3ddna
     /usr/bin/bash ${_3ddna_path}/run-asm-pipeline.sh -r 0 -q 0 --early-exit ${initial_dir}/01.split_minimap/contig.dup.fasta  ${initial_dir}/02.paf2mnd/merged_nodups.txt
 
