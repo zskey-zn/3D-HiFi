@@ -67,23 +67,146 @@ options:
 ##<span id="comparison">Comparison</span>
 The following table summarizes a performance comparison of HAST against other tools (wf-pore-c and Cphasing) across various biological datasets, detailing metrics such as valid reads, processing time, and memory usage.
 
-| Dataset             | Software   | Dedup valid reads | Pairs number | pairs num/reads num | Wall time | RAM  |
-|---------------------|------------|------------------:|-------------:|--------------------:|----------:|-----:|
-| Ceratitis capitata  | HAST       |         1,185,394 |   11,508,130 |                8.75 |     32min |  42G |
-|                     | wf-pore-c  |         1,163,280 |    3,264,519 |                2.48 |      2.5h |  39G |
-|                     | Cphasing   |         1,015,477 |    5,888,352 |                4.48 |     48min |  42G |
-| Anopheles coluzzii  | HAST       |         2,282,982 |   64,712,163 |               27.35 |      1.2h |  70G |
-|                     | wf-pore-c  |         2,159,056 |    9,216,303 |                3.90 |      3.5h |  65G |
-|                     | Cphasing   |         2,258,817 |   50,310,732 |               21.27 |      1.2h |  67G |
-| Homo sapien         | HAST       |         9,198,589 |  720,830,448 |               78.28 |      1d5h | 147G |
-|                     | wf-pore-c  |         8,743,704 |   46,912,773 |                5.09 |     1d7h  |  61G |
-|                     | Cphasing   |         9,144,776 |  364,842,740 |               39.62 |     17.9h | 128G |
-| Plecia longiforceps | HAST       |        15,223,238 |  143,783,824 |                6.03 |      4.7h |  96G |
-|                     | wf-pore-c  |        13,474,187 |   35,116,293 |                1.47 |     11.2h |  86G |
-|                     | Cphasing   |        12,793,521 |   69,399,906 |                2.91 |      3.8h |  88G |
-| Rosa hybrida        | HAST       |        13,338,018 |  539,607,578 |               37.38 |     16.2h |  82G |
-|                     | wf-pore-c  |        10,956,145 |   37,981,725 |                2.63 |     1d2h  |   ?  |
-|                     | Cphasing   |         7,846,147 |   53,071,524 |                3.68 |      5.6h |  71G |
+<table>
+  <thead>
+    <tr>
+      <th>Dataset</th>
+      <th>Software</th>
+      <th>Dedup valid reads</th>
+      <th>Pairs number</th>
+      <th>pairs num/reads num</th>
+      <th>Wall time</th>
+      <th>RAM</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3">Ceratitis capitata</td>
+      <td>HAST</td>
+      <td>1,185,394</td>
+      <td>11,508,130</td>
+      <td>8.75</td>
+      <td>32min</td>
+      <td>42G</td>
+    </tr>
+    <tr>
+      <td>wf-pore-c</td>
+      <td>1,163,280</td>
+      <td>3,264,519</td>
+      <td>2.48</td>
+      <td>2.5h</td>
+      <td>39G</td>
+    </tr>
+    <tr>
+      <td>Cphasing</td>
+      <td>1,015,477</td>
+      <td>5,888,352</td>
+      <td>4.48</td>
+      <td>48min</td>
+      <td>42G</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Anopheles coluzzii</td>
+      <td>HAST</td>
+      <td>2,282,982</td>
+      <td>64,712,163</td>
+      <td>27.35</td>
+      <td>1.2h</td>
+      <td>70G</td>
+    </tr>
+    <tr>
+      <td>wf-pore-c</td>
+      <td>2,159,056</td>
+      <td>9,216,303</td>
+      <td>3.90</td>
+      <td>3.5h</td>
+      <td>65G</td>
+    </tr>
+    <tr>
+      <td>Cphasing</td>
+      <td>2,258,817</td>
+      <td>50,310,732</td>
+      <td>21.27</td>
+      <td>1.2h</td>
+      <td>67G</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Homo sapien</td>
+      <td>HAST</td>
+      <td>9,198,589</td>
+      <td>720,830,448</td>
+      <td>78.28</td>
+      <td>1d5h</td>
+      <td>147G</td>
+    </tr>
+    <tr>
+      <td>wf-pore-c</td>
+      <td>8,743,704</td>
+      <td>46,912,773</td>
+      <td>5.09</td>
+      <td>1d7h</td>
+      <td>61G</td>
+    </tr>
+    <tr>
+      <td>Cphasing</td>
+      <td>9,144,776</td>
+      <td>364,842,740</td>
+      <td>39.62</td>
+      <td>17.9h</td>
+      <td>128G</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Plecia longiforceps</td>
+      <td>HAST</td>
+      <td>15,223,238</td>
+      <td>143,783,824</td>
+      <td>6.03</td>
+      <td>4.7h</td>
+      <td>96G</td>
+    </tr>
+    <tr>
+      <td>wf-pore-c</td>
+      <td>13,474,187</td>
+      <td>35,116,293</td>
+      <td>1.47</td>
+      <td>11.2h</td>
+      <td>86G</td>
+    </tr>
+    <tr>
+      <td>Cphasing</td>
+      <td>12,793,521</td>
+      <td>69,399,906</td>
+      <td>2.91</td>
+      <td>3.8h</td>
+      <td>88G</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Rosa hybrida</td>
+      <td>HAST</td>
+      <td>13,338,018</td>
+      <td>539,607,578</td>
+      <td>37.38</td>
+      <td>16.2h</td>
+      <td>82G</td>
+    </tr>
+    <tr>
+      <td>wf-pore-c</td>
+      <td>10,956,145</td>
+      <td>37,981,725</td>
+      <td>2.63</td>
+      <td>1d2h</td>
+      <td>51G</td>
+    </tr>
+    <tr>
+      <td>Cphasing</td>
+      <td>7,846,147</td>
+      <td>53,071,524</td>
+      <td>3.68</td>
+      <td>5.6h</td>
+      <td>71G</td>
+    </tr>
+  </tbody>
+</table>
 
 ## <span id="output">Output Files</span>
 Primary Output Files and Their Specifications
