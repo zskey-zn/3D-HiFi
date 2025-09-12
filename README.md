@@ -248,6 +248,7 @@ Primary Output Files and Their Specifications
 ## <span id="help">Get help</span>
 ### Help
 For detailed instructions regarding chromosome ordering, orientation, and visualization, please see [automated_orient_visualization_pipeline](https://github.com/zskey-zn/HAST/tree/main/automated_orient_visualization).
+
 Feel free to raise an issue at the [isssue page](https://github.com/zskey-zn/HAST/issues)
 
 `Note:` Please ask questions on the issue page first. They are also helpful to other users.
