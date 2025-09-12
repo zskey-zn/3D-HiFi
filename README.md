@@ -81,7 +81,7 @@ The following table summarizes a performance comparison of HAST against other to
   </thead>
   <tbody>
     <tr>
-      <td rowspan="3" style="word-wrap: break-word;"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14654081" target="_blank">Ceratitis capitata</a></td>
+      <td rowspan="3" style="word-wrap: break-word;"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14654081" target="_blank">Ceratitis_capitata</a></td>
       <td>HAST</td>
       <td>1,185,394</td>
       <td>11,508,130</td>
@@ -106,7 +106,7 @@ The following table summarizes a performance comparison of HAST against other to
       <td>42G</td>
     </tr>
     <tr>
-      <td rowspan="3"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14654111" target="_blank">Anopheles coluzzii</a></td>
+      <td rowspan="3"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14654111" target="_blank">Anopheles_coluzzii</a></td>
       <td>HAST</td>
       <td>2,282,982</td>
       <td>64,712,163</td>
@@ -131,7 +131,7 @@ The following table summarizes a performance comparison of HAST against other to
       <td>67G</td>
     </tr>
     <tr>
-      <td rowspan="3"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14275147" target="_blank">Homo sapien</a></td>
+      <td rowspan="3"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14275147" target="_blank">Homo_sapien</a></td>
       <td>HAST</td>
       <td>9,198,589</td>
       <td>720,830,448</td>
@@ -156,7 +156,7 @@ The following table summarizes a performance comparison of HAST against other to
       <td>128G</td>
     </tr>
     <tr>
-      <td rowspan="3"><a href="https://www.ncbi.nlm.nih.gov/sra/SRR29580843" target="_blank">Plecia longiforceps</a></td>
+      <td rowspan="3"><a href="https://www.ncbi.nlm.nih.gov/sra/SRR29580843" target="_blank">Plecia_longiforceps</a></td>
       <td>HAST</td>
       <td>15,223,238</td>
       <td>143,783,824</td>
@@ -181,7 +181,7 @@ The following table summarizes a performance comparison of HAST against other to
       <td>88G</td>
     </tr>
     <tr>
-      <td rowspan="3"><a href="https://www.ncbi.nlm.nih.gov/sra/SRR28905076" target="_blank">Rosa hybrida</a></td>
+      <td rowspan="3"><a href="https://www.ncbi.nlm.nih.gov/sra/SRR28905076" target="_blank">Rosa_hybrida</a></td>
       <td>HAST</td>
       <td>13,338,018</td>
       <td>539,607,578</td>
