@@ -228,6 +228,12 @@ Primary Output Files and Their Specifications
 │   └── contig.dup.fasta        # rescued contig genome if you set --polyploid parameter
 ├── 02.paf2mnd
 │   ├── your_species.mnd.txt
+│   ├── your_species.mnd.sort.txt
+│   ├── dups.txt
+│   ├── merged_nodups.txt        # nodups mnd file
+│   └── tmp
+├── 02.02.paf2mnd_dup            # if you set --polyploid parameter
+│   ├── your_species.mnd.txt
 │   ├── your_species.mnd.dup.txt # new mnd file if you set --polyploid parameter
 │   ├── your_species.mnd.sort.txt
 │   ├── dups.txt
@@ -241,7 +247,13 @@ Primary Output Files and Their Specifications
 │   ├── contig.0.assembly  # Input of Juicebox to manually correct
 │   ├── contig.0.hic       # Input of Juicebox to manually correct
 │   ├── contig.cprops
-│   └── contig.mnd.txt  
+│   └── contig.mnd.txt
+├── 03.3ddna_dup          # use this directory's result to manually correct if you set --polyploid parameter
+│   ├── temp.contig.dup.0.asm_mnd.txt
+│   ├── contig.dup.0_asm.scaffold_track.txt
+│   ├── contig.dup.0_asm.superscaf_track.txt
+│   ├── contig.dup.0.assembly  # Input of Juicebox to manually correct
+│   └── contig.dup.0.hic       # Input of Juicebox to manually correct
 └── read.summary          # reads mapping stat
 ```
 
