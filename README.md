@@ -88,7 +88,7 @@ The following table summarizes a performance comparison of HAST against other to
   </thead>
   <tbody>
     <tr>
-      <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14654081" target="_blank">Ceratitis_capitata</a></td>
+      <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14654081" target="_blank">Ceratitis_capitata</a> (27X) </td>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
       <td style="padding: 8px; text-align: right;">1,185,394</td>
       <td style="padding: 8px; text-align: right;">11,508,130</td>
@@ -113,7 +113,7 @@ The following table summarizes a performance comparison of HAST against other to
       <td style="padding: 8px; text-align: left;">42G</td>
     </tr>
     <tr>
-      <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14654111" target="_blank">Anopheles_coluzzii</a></td>
+      <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14654111" target="_blank">Anopheles_coluzzii</a> (56X) </td>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
       <td style="padding: 8px; text-align: right;">2,282,982</td>
       <td style="padding: 8px; text-align: right;">64,712,163</td>
@@ -138,7 +138,7 @@ The following table summarizes a performance comparison of HAST against other to
       <td style="padding: 8px; text-align: left;">67G</td>
     </tr>
     <tr>
-      <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14275147" target="_blank">Homo_sapien</a></td>
+      <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14275147" target="_blank">Homo_sapien</a> (26X) </td>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
       <td style="padding: 8px; text-align: right;">9,198,589</td>
       <td style="padding: 8px; text-align: right;">720,830,448</td>
@@ -163,7 +163,7 @@ The following table summarizes a performance comparison of HAST against other to
       <td style="padding: 8px; text-align: left;">128G</td>
     </tr>
     <tr>
-      <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/SRR29580843" target="_blank">Plecia_longiforceps</a></td>
+      <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/SRR29580843" target="_blank">Plecia_longiforceps</a> (49X) </td>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
       <td style="padding: 8px; text-align: right;">15,223,238</td>
       <td style="padding: 8px; text-align: right;">143,783,824</td>
@@ -188,7 +188,7 @@ The following table summarizes a performance comparison of HAST against other to
       <td style="padding: 8px; text-align: left;">88G</td>
     </tr>
     <tr>
-      <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/SRR28905076" target="_blank">Rosa_hybrida</a></td>
+      <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/SRR28905076" target="_blank">Rosa_hybrida</a> (23X) </td>
       <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
       <td style="padding: 8px; text-align: right;">13,338,018</td>
       <td style="padding: 8px; text-align: right;">539,607,578</td>
