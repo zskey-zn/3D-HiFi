@@ -1,7 +1,7 @@
-## HAST : HiFi-C Accelerated Scaffolding Tool
+## 3D-HiFi: A fast and accurate pipeline for chromosome-scale scaffolding from HiFi-C data
 
 ## <span id="Introduction">Introduction</span>
-&emsp;&emsp;As an emerging high-resolution long-read chromosome conformation capture technique, HiFi-C currently lacks dedicated software tools. Researchers have to adapt pipelines designed for Pore-C, which may underestimate the true potential of HiFi-C data and negatively impact downstream analyses such as scaffolding. To address this issue, we have developed `HAST`, a tool specifically designed for efficient scaffolding using HiFi-C data. `HAST` also supports Pore-C data.
+&emsp;&emsp;As an emerging high-resolution long-read chromosome conformation capture technique, HiFi-C currently lacks dedicated software tools. Researchers have to adapt pipelines designed for Pore-C, which may underestimate the true potential of HiFi-C data and negatively impact downstream analyses such as scaffolding. To address this issue, we have developed `3D-HiFi`, a tool specifically designed for efficient scaffolding using HiFi-C data. `3D-HiFi` also supports Pore-C data.
 
 ## <span id="Overview">Overview</span>
 &emsp;&emsp;Given the substantial length of HiFi-C reads, we employed an analysis strategy involving in silico fragmentation at restriction enzyme cleavage sites prior to alignment.
@@ -29,15 +29,15 @@ Software:
 
 ## <span id="Installation">Installation</span>
 
-HAST has been tested and validated on servers running Linux.
+3D-HiFi has been tested and validated on servers running Linux.
 ```bash
-# (1) Download HAST from GitHub
-$ git clone https://github.com/zskey-zn/HAST.git
+# (1) Download 3D-HiFi from GitHub
+$ git clone https://github.com/zskey-zn/3D-HiFi.git
 # (2) Resolve dependencies
 # We strongly recommend using conda to install dependencies. 
 $ conda env create -f environment.yml
 # Activate the HapHiC conda environment
-$ conda activate hast # or: source /path/to/conda/bin/activate hast
+$ conda activate 3D-HiFi # or: source /path/to/conda/bin/activate 3D-HiFi
 # (3) Install 3d-dna
 $ git clone https://github.com/aidenlab/3d-dna.git
 #Give executable permissions
@@ -63,7 +63,7 @@ options:
   -a, --polyploid      Enable polyploid mode can rescue collapsed contigs  (default: disabled)
 ```
 ## <span id="comparison">Comparison</span>
-The following table summarizes a performance comparison of HAST against other tools (wf-pore-c and Cphasing) across various biological datasets, detailing metrics such as valid reads, processing time, and memory usage.
+The following table summarizes a performance comparison of 3D-HiFi against other tools (wf-pore-c and Cphasing) across various biological datasets, detailing metrics such as valid reads, processing time, and memory usage.
 
 <table style="width: 100%; table-layout: fixed; border-collapse: collapse;">
   <colgroup>
@@ -89,7 +89,7 @@ The following table summarizes a performance comparison of HAST against other to
   <tbody>
     <tr>
       <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14654081" target="_blank">Ceratitis_capitata</a> (27X) </td>
-      <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">3D-HiFi</td>
       <td style="padding: 8px; text-align: right;">1,185,394</td>
       <td style="padding: 8px; text-align: right;">11,508,130</td>
       <td style="padding: 8px; text-align: right;">8.75</td>
@@ -114,7 +114,7 @@ The following table summarizes a performance comparison of HAST against other to
     </tr>
     <tr>
       <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14654111" target="_blank">Anopheles_coluzzii</a> (56X) </td>
-      <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">3D-HiFi</td>
       <td style="padding: 8px; text-align: right;">2,282,982</td>
       <td style="padding: 8px; text-align: right;">64,712,163</td>
       <td style="padding: 8px; text-align: right;">27.35</td>
@@ -139,7 +139,7 @@ The following table summarizes a performance comparison of HAST against other to
     </tr>
     <tr>
       <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/ERR14275147" target="_blank">Homo_sapien</a> (26X) </td>
-      <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">3D-HiFi</td>
       <td style="padding: 8px; text-align: right;">9,198,589</td>
       <td style="padding: 8px; text-align: right;">720,830,448</td>
       <td style="padding: 8px; text-align: right;">78.28</td>
@@ -164,7 +164,7 @@ The following table summarizes a performance comparison of HAST against other to
     </tr>
     <tr>
       <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/SRR29580843" target="_blank">Plecia_longiforceps</a> (49X) </td>
-      <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">3D-HiFi</td>
       <td style="padding: 8px; text-align: right;">15,223,238</td>
       <td style="padding: 8px; text-align: right;">143,783,824</td>
       <td style="padding: 8px; text-align: right;">6.03</td>
@@ -189,7 +189,7 @@ The following table summarizes a performance comparison of HAST against other to
     </tr>
     <tr>
       <td rowspan="3" style="padding: 8px; text-align: left; vertical-align: top; white-space: nowrap;"><a href="https://www.ncbi.nlm.nih.gov/sra/SRR28905076" target="_blank">Rosa_hybrida</a> (23X) </td>
-      <td style="padding: 8px; text-align: left; white-space: nowrap;">HAST</td>
+      <td style="padding: 8px; text-align: left; white-space: nowrap;">3D-HiFi</td>
       <td style="padding: 8px; text-align: right;">13,338,018</td>
       <td style="padding: 8px; text-align: right;">539,607,578</td>
       <td style="padding: 8px; text-align: right;">37.38</td>
@@ -259,14 +259,14 @@ Primary Output Files and Their Specifications
 
 ## <span id="help">Get help</span>
 ### Help
-For detailed instructions regarding chromosome ordering, orientation, and visualization, please see [automated_orient_visualization_pipeline](https://github.com/zskey-zn/HAST/tree/main/automated_orient_visualization).
+For detailed instructions regarding chromosome ordering, orientation, and visualization, please see [automated_orient_visualization_pipeline](https://github.com/zskey-zn/3D-HiFi/tree/main/automated_orient_visualization).
 
-Feel free to raise an issue at the [isssue page](https://github.com/zskey-zn/HAST/issues)
+Feel free to raise an issue at the [isssue page](https://github.com/zskey-zn/3D-HiFi/issues)
 
 `Note:` Please ask questions on the issue page first. They are also helpful to other users.
 ### Contact
 For addtional help, please send an email to zhengshang@frasergen.com
 
 ## <span id="Citaing">Citating</span>
-If you use HAST in your work,please cite:
+If you use 3D-HiFi in your work,please cite:
 
