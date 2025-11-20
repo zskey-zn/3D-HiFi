@@ -48,7 +48,7 @@ $ chmod +x  *.sh */*
 ## <span id="quick_start">Quick start</span>
 
 ```bash
-usage_example: HiFi-C_pipeline.sh -r PATH/contig.fa -i PATH/HiFi-C.fq.gz -p '-x map-hifi' -t 30 -c 10000 -e GATC -d PATH/3d-dna -o your_species
+usage_example: 3D-HiFi -r PATH/contig.fa -i PATH/HiFi-C.fq.gz -p '-x map-hifi' -t 30 -c 10000 -e GATC -d PATH/3d-dna -o your_species
 
 options:
   -h, --help           show this help message and exit
