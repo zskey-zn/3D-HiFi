@@ -55,7 +55,7 @@ $ python3 /path/to/HAST/script/chrom_correspond.py --correspond-table correspond
 ```
 
 ### <span id="visualization">Visualization and Final genome</span>
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/b6e255aa-74ac-45ea-bca1-9f942ee159e9" />
+<img width="500" height="400" alt="image" src="../image/Anopheles_coluzzii.png" />
 
 Generate highly customizable contact maps and Final genome
 ```bash
