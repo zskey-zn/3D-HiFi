@@ -36,7 +36,7 @@ $ git clone https://github.com/zskey-zn/3D-HiFi.git
 # (2) Resolve dependencies
 # We strongly recommend using conda to install dependencies. 
 $ conda env create -f environment.yml
-# Activate the HapHiC conda environment
+# Activate the 3D-HiFi conda environment
 $ conda activate 3D-HiFi # or: source /path/to/conda/bin/activate 3D-HiFi
 # (3) Install 3d-dna
 $ git clone https://github.com/aidenlab/3d-dna.git
