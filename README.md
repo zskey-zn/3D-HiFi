@@ -5,8 +5,10 @@
 
 ## <span id="Overview">Overview</span>
 &emsp;&emsp;Given the substantial length of HiFi-C reads, we employed an analysis strategy involving in silico fragmentation at restriction enzyme cleavage sites prior to alignment.
+<div align="center">
+<img src="image/workflow.png" width=80% height=80% >
+</div>
 
-![workflow](image/workflow.png)
 ## Table of contents
 - [Dependencies](#Dependencies)
 - [Installation](#installation)
