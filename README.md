@@ -62,7 +62,7 @@ options:
   -e, --enzyme_site    Enzyme recognition site: GATC (MboI/DpnII), AAGCTT (HindIII), CATG(NlaIII)
   -d, --_3ddna_path    3ddna software path
   -o, --output_prefix  output prefix
-  -a, --polyploid      Enable polyploid mode can rescue collapsed contigs  (default: disabled)
+  -a, --polyploid      Enable polyploid mode can rescue collapsed contigs  (default: 1)
 ```
 ## <span id="comparison">Comparison</span>
 The following table summarizes a performance comparison of 3D-HiFi against other tools (wf-pore-c and Cphasing) across various biological datasets, detailing metrics such as valid reads, processing time, and memory usage.
@@ -223,11 +223,12 @@ Primary Output Files and Their Specifications
 ```
 .
 ├── 01.split_minimap
-│   ├── your_species.paf        # minimap2 result
-│   ├── your_species.len        # contig size if you set --polyploid parameter
-│   ├── contig.depth            # depth average contig if you set --polyploid parameter
-│   ├── collapsed.contig.list   # collapsed contig list if you set --polyploid parameter
-│   └── contig.dup.fasta        # rescued contig genome if you set --polyploid parameter
+│   ├── your_species.paf           # minimap2 result
+│   ├── your_species.len           # contig size if you set --polyploid parameter
+│   ├── depth.txt                  # depth average contig if you set --polyploid parameter
+│   ├── depth_fit_curve_fixed.png  # depth denisty map
+│   ├── collapsed.contig.list      # collapsed contig list if you set --polyploid parameter
+│   └── contig.dup.fasta           # rescued contig genome if you set --polyploid parameter
 ├── 02.paf2mnd
 │   ├── your_species.mnd.txt
 │   ├── your_species.mnd.sort.txt
