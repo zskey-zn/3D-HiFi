@@ -24,7 +24,7 @@ Software:
 - [pigz](http://zlib.net/pigz/)
 - [minimap2](https://github.com/lh3/minimap2)
 - [seqkit](https://bioinf.shenwei.me/seqkit)
-- [3d-dna](https://github.com/aidenlab/3d-dna)
+- [3D-DNA](https://github.com/aidenlab/3d-dna)
 - [parallel](https://www.gnu.org/software/parallel)
 - [juicebox](https://github.com/aidenlab/Juicebox)
 - [mummer](https://github.com/mummer4/mummer)
