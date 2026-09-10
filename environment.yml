@@ -1,4 +1,4 @@
-name: HiFi-C
+name: 3D-HiFi
 channels:
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda
   - bioconda
